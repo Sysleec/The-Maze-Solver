@@ -21,7 +21,7 @@ class Window:
             self.redraw()
         print("Close program")
 
-    def draw_line(self, line, fill_color):
+    def draw_line(self, line, fill_color="white"):
         line.draw(self.__canvas, fill_color)
 
     def close(self):

@@ -1,11 +1,18 @@
 from window import *
+from cell import *
 
 
 def main():
     win = Window(800, 600)
-    win.draw_line(Line(Point(200, 0), Point(200, 200)), "white")
-    win.draw_line(Line(Point(300, 300), Point(200, 200)), "white")
-    win.draw_line(Line(Point(100, 100), Point(150, 150)), "white")
+
+    ce = Cell(win)
+    ce.has_left_wall = False
+    ce.draw(50, 50, 100, 100)
+
+    ce = Cell(win)
+    ce.has_top_wall = False
+    ce.has_bottom_wall = False
+    ce.draw(200, 200, 250, 250)
 
     win.wait_for_close()
 
