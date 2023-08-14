@@ -2,7 +2,7 @@ from window import *
 
 
 class Cell:
-    def __init__(self, win):
+    def __init__(self, win=None):
         self.has_left_wall = True
         self.has_right_wall = True
         self.has_top_wall = True
@@ -34,7 +34,7 @@ class Cell:
     def draw_move(self, to_cell, undo=False):
         if self._win is None:
             return
-        
+
         fill_color = "red"
         if undo:
             fill_color = "gray"
@@ -45,7 +45,6 @@ class Cell:
         to_x_mid = (to_cell._x1 + to_cell._x2) / 2
         to_y_mid = (to_cell._y1 + to_cell._y2) / 2
 
-            
         # left
         if self._x1 > to_cell._x1:
             line = Line(Point(self._x1, y_mid), Point(x_mid, y_mid))
@@ -77,4 +76,3 @@ class Cell:
             line = Line(Point(to_x_mid, to_cell._y2),
                         Point(to_x_mid, to_y_mid))
             self._win.draw_line(line, fill_color)
-
