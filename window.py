@@ -41,6 +41,6 @@ class Line:
 
     def draw(self, canvas, fill_color="white"):
         canvas.create_line(
-            self.p1.x, self.p1.y, self.p2.x, self.p2.y, fill=fill_color, width=2
+            self.p1.x, self.p1.y, self.p2.x, self.p2.y, fill=fill_color, width=3
         )
         canvas.pack(fill=BOTH, expand=1)

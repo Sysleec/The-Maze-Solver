@@ -55,7 +55,7 @@ class Cell:
         to_x_mid = (to_cell._x1 + to_cell._x2) / 2
         to_y_mid = (to_cell._y1 + to_cell._y2) / 2
 
-        fill_color = "green"
+        fill_color = "red"
         if undo:
             fill_color = "gray"
 
